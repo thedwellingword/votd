@@ -35,12 +35,12 @@ function fRetrieveVotM(pDate) {
     
     const vDate = fDateString(pDate);
     
-    if (window.vVotD[vDate].M) {
+    if (window.vVotD[vDate].AM) {
         return {
             D: vDate,
-            P: 'M',
-            R: window.vVotD[vDate].M.R,
-            T: window.vVotD[vDate].M.T
+            P: 'AM',
+            R: window.vVotD[vDate].AM.R,
+            T: window.vVotD[vDate].AM.T
         }
     }
     return null;
@@ -50,12 +50,12 @@ function fRetrieveVotE(pDate) {
     
     const vDate = fDateString(pDate);
     
-    if (window.vVotD[vDate].E) {
+    if (window.vVotD[vDate].PM) {
         return {
             D: vDate,
-            P: 'E',
-            R: window.vVotD[vDate].E.R,
-            T: window.vVotD[vDate].E.T
+            P: 'PM',
+            R: window.vVotD[vDate].PM.R,
+            T: window.vVotD[vDate].PM.T
         }
     }
     return null;
@@ -64,9 +64,9 @@ function fRetrieveVotE(pDate) {
 function fRetrieveVotD(pDate, pPeriod) {
     
     switch (pPeriod) {
-        case 'M':
+        case 'AM':
         return fRetrieveVotM(pDate);
-        case 'E':
+        case 'PM':
         return fRetrieveVotE(pDate);
         default:
         return null;
@@ -128,12 +128,12 @@ function fConstructVerseHTML(vVerse) {
     let vPeriod = 'votd';
     
     switch (vVerse.P) {
-        case 'M':
+        case 'AM':
         vHashTag = '#VerseOfTheMorning';
         vColour = 'yellow';
         vPeriod = 'votm';
         break;
-        case 'E':
+        case 'PM':
         vHashTag = '#VerseOfTheEvening';
         vColour = 'purple';
         vPeriod = 'vote';
