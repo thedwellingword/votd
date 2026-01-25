@@ -1,0 +1,63 @@
+
+.votd-hidden {
+    display: none !important;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+:not(.votd-hidden) {
+    opacity: 1;
+}
+
+
+
+.votd-text {
+}
+
+.votd-reference {
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+.votd-hashtag {
+    font-size: 0.8em;
+    line-height: 1.5;
+    margin: 0.2em 0;
+}
+
+.votd-date {
+    font-size: 0.75em;
+    line-height: 1.5;
+    margin: 0.2em 0.2em;
+}
+
+
+.votm .votd-text,
+.votm .votd-reference {
+    text-align: left;
+}
+
+.votm .votd-hashtag,
+.votm .votd-date {
+    text-align: right;
+}
+
+
+
+.vote .votd-text,
+.vote .votd-reference {
+    text-align: right;
+}
+
+.vote .votd-hashtag,
+.vote .votd-date {
+    text-align: left;
+}
+
+.votm .kg-callout-text,
+.vote .kg-callout-text
+{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
