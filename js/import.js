@@ -34,7 +34,7 @@
         }
         
         while (iDate >= iTerminate) {
-            vLibraryFilesToLoad.push(`https://votd.thedwellingword.org/${fYearMonthString(iDate)}.json`);
+            vLibraryFilesToLoad.push(`https://votd.thedwellingword.org/${fYearMonthString(iDate)}/verses.json`);
             iDate.setMonth(iDate.getMonth() -1);
         }
         
